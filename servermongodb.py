@@ -230,7 +230,7 @@ def prepare_app(app):
     )
 
     access_token = Token(
-        user_id=1, client_id='dev', access_token='exdpired', expires_in=3600
+        user_id=1, client_id='dev', access_token='expired', expires_in=3600
     )
 
     access_token2 = Token(
