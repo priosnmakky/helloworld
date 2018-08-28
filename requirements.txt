@@ -1,0 +1,10 @@
+Django~=2.1.0
+Flask-PyMongo
+pymongo
+django-mssql
+django-pyodbc-azure
+django-oauth-toolkit
+social-auth-core
+social-auth-app-django
+flask-sentinel
+Flask-SQLAlchemy
