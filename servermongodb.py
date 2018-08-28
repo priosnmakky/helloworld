@@ -1,13 +1,17 @@
 from datetime import datetime, timedelta
 from flask import g, render_template, request, jsonify, make_response
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_oauthlib.provider import OAuth2Provider
 from flask_oauthlib.contrib.oauth2 import bind_sqlalchemy
 from flask_oauthlib.contrib.oauth2 import bind_cache_grant
+from flask import Flask
+from flask_mongoengine import MongoEngine
+db = MongoEngine()
 
-
-db = SQLAlchemy()
+app = Flask(__name__)
+app.config.from_pyfile('the-config.cfg')
+db.init_app(app)
 
 
 class User(db.Model):
